@@ -1,0 +1,9 @@
+easy_admin:
+      design:
+          
+          form_theme:
+              - "@EasyAdmin/form/bootstrap_4.html.twig"
+          menu:
+                  - {entity: 'Article', label: 'Article'}
+                  - {entity: 'Categorie', label: 'Categorie'}
+                  - {entity: 'Tag', label: 'Mot-clés'}
