@@ -1,0 +1,21 @@
+easy_admin:
+    list:
+        title: 'list.%%entity_label%%'
+    show:
+        title: '%%entity_name%% (#%%entity_id%%)'
+    entities:
+        Categorie:
+            class: App\Entity\Categorie
+            help: 'Global message displayed in all views'
+            label: 'Categories'
+            list:
+                title: "%%entity_label%%"
+                help: 'The list view overrides the global help message'
+                max_results: 1
+            form:
+                    - {property: 'name'}
+                    - {property: 'slug'}
+            show:
+                help: 'Hello World'
+        Post:
+            class: App\Entity\Post
