@@ -1,0 +1,22 @@
+easy_admin:
+    entities:
+        Categorie:
+            class: App\Entity\Categorie
+            help: 'Global message displayed in all views'
+            label: 'Categories'
+            list:
+                title: "%%entity_label%%"
+                help: 'The list view overrides the global help message'
+                max_results: 5
+                fields:
+                    - {property: 'name', label: 'Nom', css_class: 'text-center'}
+                    - id
+            form:
+                    - {property: 'name'}
+                    - {property: 'slug'}
+            show:
+                help: 'Hello World'
+            search:
+                fields: ['name']
+            edit:
+                title: 'Mofidication'

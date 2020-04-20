@@ -1,0 +1,11 @@
+easy_admin:
+    design:
+        menu:
+            - label: 'Dashboard'
+              children: ['Categorie', 'Post']
+            - label: 'Gestion des rôles'
+              children: ['User']
+        brand_color: '#ADC74D'
+        form_theme:
+            - "@EasyAdmin/form/bootstrap_4.html.twig"
+            - "@FOSCKEditor/Form/ckeditor_widget.html.twig"

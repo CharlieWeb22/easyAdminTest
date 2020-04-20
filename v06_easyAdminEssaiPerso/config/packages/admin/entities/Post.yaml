@@ -1,0 +1,46 @@
+easy_admin:
+    entities:
+        Post:
+            class: App\Entity\Post
+            help: 'Voici la liste des articles que vous avez créé'
+            label: 'Articles'
+            list:
+                title: "%%entity_label%%"
+                max_results: 5
+                fields:
+                    - {property: 'name', label: 'Nom Article'}
+                    - {property: 'featured_image', label: 'Photo', type: 'image', base_path: '%app.path.featured_image%'}
+                    - {property: 'Categorie'}
+                    - {property: 'createdAt', label: 'Cate de Création'}
+                    - {property: 'updatedAt', label: 'Date de mise à jour'}
+                    - {property: 'Online', label: 'En ligne'}
+                    
+                actions:
+                    - { name: 'show', icon: 'search' }
+                    - { name: 'edit',, icon: 'edit' }
+                    - { name: 'delete', icon: 'trash' }
+            edit:
+                help: 'This message is for an article that you are editing'
+            show:
+                help: 'This message is for an article that you want to see'
+                fields:
+                    - {property: 'id', label: 'Identifiant'}
+                    - {property: 'name', label: 'Nom Article'}
+                    - {property: 'content', label: 'Contenu', type: 'fos_ckeditor'}
+                    - {property: 'featured_image', type: 'image', base_path: '%app.path.featured_image%'}
+                    - {property: 'slug'}
+                    - {property: 'Categorie'}
+                    - {property: 'createdAt'}
+                    - {property: 'updatedAt', label: 'Date de mise à jour'}
+                    - {property: 'Online', label: 'En ligne'}
+
+            form:
+                fields:
+                    - {property: 'name', label: 'Nom Article'}
+                    - {property: 'slug'}
+                    - {property: 'Categorie'}
+                    - {property: 'content', label: 'Contenu', type: 'fos_ckeditor'}
+                    - {property: 'createdAt'}
+                    - {property: 'Online', label: 'En ligne'}
+                    - {property: 'imageFile', type: 'file', base_path: '%app.path.featured_image%'}
+        
